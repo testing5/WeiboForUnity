@@ -22,7 +22,7 @@
     UIButton *b = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     b.frame = CGRectMake(40,40,80,40);
     
-    [b setTitle:@"press me" forState:UIControlStateNormal];
+    [b setTitle:@"login" forState:UIControlStateNormal];
     [self.view addSubview:b];
     [b addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
 }

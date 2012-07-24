@@ -26,7 +26,7 @@
 
 @required
 
-- (void)authorize:(WBAuthorize *)authorize didSucceedWithAccessToken:(NSString *)accessToken userID:(NSString *)userID expiresIn:(NSInteger)seconds;
+//- (void)authorize:(WBAuthorize *)authorize didSucceedWithAccessToken:(NSString *)accessToken userID:(NSString *)userID expiresIn:(NSInteger)seconds;
 
 - (void)authorize:(WBAuthorize *)authorize didFailWithError:(NSError *)error;
 
