@@ -73,9 +73,10 @@
 @property (nonatomic, retain) UIImage *contentImage;
 @property (nonatomic, assign) id<WBSendViewDelegate> delegate;
 
-- (id)initWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret text:(NSString *)text image:(UIImage *)image;
+
+- (id)initWithText:(NSString *)text image:(UIImage *)image;
 
 - (void)show:(BOOL)animated;
 - (void)hide:(BOOL)animated;
-
+- (void)send;
 @end

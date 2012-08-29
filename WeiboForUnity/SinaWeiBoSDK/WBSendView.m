@@ -64,11 +64,11 @@ static BOOL WBIsDeviceIPad()
 
 #pragma mark - WBSendView Life Circle
 
-- (id)initWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret text:(NSString *)text image:(UIImage *)image
+- (id)initWithText:(NSString *)text image:(UIImage *)image
 {
     if (self = [super initWithFrame:CGRectMake(0, 0, 320, 480)])
     {
-        engine = [[WBEngine alloc] initWithAppKey:appKey appSecret:appSecret];
+        engine = [[WBEngine alloc]initWithAppKey:[WBEngine sharedEngine].appKey appSecret:[WBEngine sharedEngine].appSecret];
         [engine setDelegate:self];
         
         // background settings
@@ -496,6 +496,8 @@ static BOOL WBIsDeviceIPad()
 
 - (void)show:(BOOL)animated
 {
+    self.hidden = YES;
+    
     [self sizeToFitOrientation:[self currentOrientation]];
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
@@ -552,6 +554,12 @@ static BOOL WBIsDeviceIPad()
 		
 		[self hideAndCleanUp];
 	}
+}
+
+- (void)send
+{
+    
+    [self onSendButtonTouched:nil];
 }
 
 #pragma mark - UIDeviceOrientationDidChangeNotification Methods

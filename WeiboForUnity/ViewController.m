@@ -119,10 +119,14 @@
 
 - (void)writeStatus
 {
-    WBSendView *sendView = [[WBSendView alloc] initWithAppKey:[WBEngine sharedEngine].appKey appSecret:[WBEngine sharedEngine].appSecret text:@"test" image:nil];
-    [sendView setDelegate:self];
+    WBSendView *sendView = [[WBSendView alloc] initWithText:@"send text" image:nil];
     
+    [sendView setDelegate:self];
     [sendView show:YES];
+    
+    [sendView send];
+    
+    
     [sendView release];
 }
 
