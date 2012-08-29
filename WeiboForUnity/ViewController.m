@@ -35,13 +35,14 @@
     [_writeButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [self.view addSubview:_writeButton];
     
+    /*
     if ([[WBEngine sharedEngine] isLoggedIn] && ![[WBEngine sharedEngine] isAuthorizeExpired]){
         [_loginButton setEnabled:NO];
         [_writeButton setEnabled:YES];
     }else{
         _loginButton.enabled = YES;
         _writeButton.enabled = NO;
-    }
+    }*/
 }
 
 - (void)viewDidUnload
@@ -82,9 +83,10 @@
                                                  otherButtonTitles:nil];
         [alertView show];
         [alertView release];
-        
+       /*
         _loginButton.enabled = NO;
         _writeButton.enabled = YES;
+        */
     }
 }
 
