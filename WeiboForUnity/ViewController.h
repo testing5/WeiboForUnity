@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "WBEngine.h"
+#import "WBSendView.h"
 
-@interface ViewController : UIViewController<WBEngineDelegate>
+@interface ViewController : UIViewController<WBEngineDelegate, WBSendViewDelegate>
+{
+    UIButton *_loginButton;
+    UIButton *_writeButton;
+}
 
 
 
