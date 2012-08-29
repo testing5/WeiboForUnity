@@ -25,6 +25,8 @@
     [b setTitle:@"login" forState:UIControlStateNormal];
     [self.view addSubview:b];
     [b addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 }
 
 - (void)viewDidUnload
